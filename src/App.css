@@ -34,7 +34,7 @@ button{
   font-family: "Poppins", sans-serif;
 }
 button:hover{
-  color: #d1cfe8;
+  color: #9b94e7;
   background-color: #e7e7e7;
 }
 .parContainer{
@@ -59,9 +59,20 @@ span{
   body{
     background-position: right;
   }
-  input{
-    width: 50%;
+  form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+  input{
+    width: 70%;
+    margin: 20px;
+  }
+  .btn{
+    width: 40%;
+  }
+ 
   .parContainer{
     background-color: rgba(0,0,0,0.3);
     margin-left: 10px;
