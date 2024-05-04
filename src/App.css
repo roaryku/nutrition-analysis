@@ -47,6 +47,10 @@ p{
   color: #141617;
   font-family: "Poppins", sans-serif;
 }
+p:hover{
+  background-color: #e7e7e7;
+  padding: 10px;
+}
 span{
   color: #b01930;
 }
