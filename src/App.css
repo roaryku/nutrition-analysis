@@ -58,6 +58,7 @@ span{
 @media all and (max-width: 800px){
   body{
     background-position: right;
+    min-height: 100vh;
   }
   form{
     display: flex;
