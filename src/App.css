@@ -55,4 +55,18 @@ span{
   color: #b01930;
 }
 
+@media all and (max-width: 800px){
+  body{
+    background-position: right;
+  }
+  input{
+    width: 50%;
+  }
+  .parContainer{
+    background-color: rgba(0,0,0,0.3);
+    margin-left: 10px;
+    margin-right: 10px;
+  }
+}
+
 
