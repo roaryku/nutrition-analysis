@@ -33,7 +33,6 @@ function App() {
       setStateLoader(false);
       const data = await response.json();
       setMyNutrition(data);
-      console.log(data)
     } else {
       setStateLoader(false);
       Swal.fire("Ingredients entered incorrectly!");
@@ -92,13 +91,3 @@ return (
 }
 
 export default App;
-
-
-// https://api.edamam.com/api/nutrition-details?app_id=4e1c9e3c&app_key=%207f26ffebc9e182eb8ef5e0a528b49ac3
-// https://api.edamam.com/api/nutrition-details
-// MY_ID - 4e1c9e3c
-// MY_KEY - 7f26ffebc9e182eb8ef5e0a528b49ac3	
-
-// 2nd APP_ID - 8f7cf633
-// 2ND APP_KEY - 12cc09660b22059c90771dd7b38a6ee1	
-// 2ND APP_URL -  https://api.edamam.com/api/nutrition-details
