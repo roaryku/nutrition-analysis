@@ -54,10 +54,16 @@ p:hover{
 span{
   color: #b01930;
 }
+.par{
+  color: #b01930;
+  font-family: "Poppins", sans-serif;
+  font-weight: bolder;
+}
 
 @media all and (max-width: 800px){
   body{
     background-position: right;
+    min-height: 100vh;
   }
   form{
     display: flex;

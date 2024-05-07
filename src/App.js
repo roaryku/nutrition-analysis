@@ -13,8 +13,8 @@ function App() {
   const [myNutrition, setMyNutrition] = useState();
   const [stateLoader, setStateLoader] = useState(false);
 
-  const APP_ID = "4e1c9e3c";
-  const APP_KEY = "7f26ffebc9e182eb8ef5e0a528b49ac3";
+  const APP_ID = "8f7cf633";
+  const APP_KEY = "12cc09660b22059c90771dd7b38a6ee1";
   const APP_URL = "https://api.edamam.com/api/nutrition-details";
 
   const fetchData = async (ingr) => {
@@ -33,6 +33,7 @@ function App() {
       setStateLoader(false);
       const data = await response.json();
       setMyNutrition(data);
+      console.log(data)
     } else {
       setStateLoader(false);
       Swal.fire("Ingredients entered incorrectly!");
@@ -69,12 +70,16 @@ return (
     </form>
     <div className="parContainer">
       {
-        myNutrition && <p>{myNutrition.calories} kcal</p>
+        myNutrition && <p className='par'>{myNutrition.calories} total kcal</p>
+      }
+       {
+        myNutrition && <p className='par'>{myNutrition.totalWeight.toFixed(2)} total gramms</p>
       }
       {
         myNutrition && Object.values(myNutrition.totalNutrients)
-          .map(({ label, quantity, unit }) =>
+          .map(({ label, quantity, unit}, index) =>
             <Nutrition
+              key={index}
               label={label}
               quantity={quantity}
               unit={unit}
@@ -93,3 +98,7 @@ export default App;
 // https://api.edamam.com/api/nutrition-details
 // MY_ID - 4e1c9e3c
 // MY_KEY - 7f26ffebc9e182eb8ef5e0a528b49ac3	
+
+// 2nd APP_ID - 8f7cf633
+// 2ND APP_KEY - 12cc09660b22059c90771dd7b38a6ee1	
+// 2ND APP_URL -  https://api.edamam.com/api/nutrition-details
